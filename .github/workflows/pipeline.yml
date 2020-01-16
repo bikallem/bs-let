@@ -156,6 +156,7 @@ jobs:
           ls -l release          
 
       - name: Publish
+        working-directory: release
         if: success()
         run: npm publish --access public
         env:
